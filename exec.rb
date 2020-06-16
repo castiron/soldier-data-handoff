@@ -7,7 +7,7 @@ gemfile do
   gem 'spreadsheet_architect', require: true
 end
 
-OUTPUT_DIR = "./output"
+OUTPUT_DIR = "./samples"
 
 SURVEY_UID = SecureRandom.uuid
 QUESTIONNAIRE_ID = SecureRandom.uuid
