@@ -1,4 +1,3 @@
-identifier,parent_id,parent_type,position_in_parent,type,question,is_multiple_choice,free_response_prompt
-28d607c4-c295-4455-a35d-1d8d4274bf17,ab8f8103-7aa7-49a1-8158-44b063f04d30,survey,2,choice,Do you think white and Negro soldiers should be in separate outfits or should they be together in the same outfit?,false,Write any comments here
-362aefb1-4cc2-477b-af71-67f07d1e7abe,82c9e6d7-b869-409a-8cd3-d77379a98dcb,questionnaire,1,choice,A question can also be a child of a questionnaire,true,
-719b98c5-131a-41bc-9f4e-776112512149,ab8f8103-7aa7-49a1-8158-44b063f04d30,survey,2,free,,false,Use the space below to write out any other comments you have about any part of this questionnaire:
+identifier,parent_id,parent_type,position_in_parent,type,question,is_multiple_choice,followup_prompt
+S032w.Q.63,S032w,questionnaire,1,choice,Do you think white and Negro soldiers should be in separate outfits or should they be together in the same outfit?,true,Write any comments here
+S032w.Q.64,S032w,questionnaire,2,free,Use the space below to write out any other comments you have about any part of this questionnaire:,false,

@@ -10,9 +10,9 @@ end
 OUTPUT_DIR = "./samples"
 
 SURVEY_UID = SecureRandom.uuid
-QUESTIONNAIRE_ID = SecureRandom.uuid
-CHOICE_QUESTION_ID = SecureRandom.uuid
-FREE_QUESTION_ID = SecureRandom.uuid
+QUESTIONNAIRE_ID = "S032w"
+CHOICE_QUESTION_ID = "S032w.Q.63"
+FREE_QUESTION_ID = "S032w.Q.64"
 RESPONDENT_ID = SecureRandom.uuid
 A1_ID = SecureRandom.uuid
 A2_ID = SecureRandom.uuid
@@ -67,33 +67,40 @@ SHEETS = {
   questions: [
     {
       identifier: CHOICE_QUESTION_ID,
-      parent_id: SURVEY_UID,
-      parent_type: "survey",
-      position_in_parent: 2,
-      type: "choice",
-      question: "Do you think white and Negro soldiers should be in separate outfits or should they be together in the same outfit?",
-      is_multiple_choice: false,
-      free_response_prompt: "Write any comments here"
-    },
-    {
-      identifier: SecureRandom.uuid,
       parent_id: QUESTIONNAIRE_ID,
       parent_type: "questionnaire",
       position_in_parent: 1,
       type: "choice",
-      question: "A question can also be a child of a questionnaire",
+      question: "Do you think white and Negro soldiers should be in separate outfits or should they be together in the same outfit?",
       is_multiple_choice: true,
-      free_response_prompt: nil
+      followup_prompt: "Write any comments here"
     },
     {
       identifier: FREE_QUESTION_ID,
-      parent_id: SURVEY_UID,
-      parent_type: "survey",
+      parent_id: QUESTIONNAIRE_ID,
+      parent_type: "questionnaire",
       position_in_parent: 2,
       type: "free",
-      question: nil,
+      question: "Use the space below to write out any other comments you have about any part of this questionnaire:",
       is_multiple_choice: false,
-      free_response_prompt: "Use the space below to write out any other comments you have about any part of this questionnaire:",
+      followup_prompt: nil,
+    }
+  ],
+  question_codes: [
+    {
+      parent_id: CHOICE_QUESTION_ID,
+      code: "01",
+      text: "SEPARATE OUTFITS OUT OF DEFERENCE TO SOUTHERN CUSTOMS (IT’S O.K. FOR SOUTH, BUT NOT FOR NORTH, NOT WHERE THIS CAMP IS LOCATED)",
+    },
+    {
+      parent_id: CHOICE_QUESTION_ID,
+      code: "01",
+      text: "SEPARATE OUTFITS BECAUSE INTERMINGLING WOULD LEAD TO VIOLENCE, FIGHTS, TROUBLE",
+    },
+    {
+      parent_id: CHOICE_QUESTION_ID,
+      code: "03",
+      text: "SEPARATE OUTFITS BECAUSE NEGROES THEMSELVES (OR BOTH NEGROES AND WHITES) LIKE IT BETTER THAT WAY (NEGROES FEEL UNCOMFORTABLE WITH WHITES, NEGROES FEEL MORE AT HOME WITH OWN RACE)"
     }
   ],
   answers: [
@@ -164,7 +171,7 @@ end
 
 def make_csv
   SHEETS.each do |key, sheet|
-    File.open("./output/#{key}.csv", 'w+b') do |f|
+    File.open("#{OUTPUT_DIR}/#{key}.csv", 'w+b') do |f|
       f.write SpreadsheetArchitect.to_csv(headers: sheet[0].keys, data: sheet.map(&:values))
     end
   end
