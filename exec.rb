@@ -29,7 +29,7 @@ SHEETS = {
       sample_size: "4000",
       number: nil,
       topic: nil,
-      keywords: "Branches of service, Deferment and the Selective Service System, Desire for combat and service overseas, Infantry - opinion of, Leisure-time activities, Medical attention, Moral questions, Officers — commissioned and non-commissioned, Officer Candidate School — interest in, Post-war optimism — pessimism, Red Cross, Religion and church attendance, Segregation of white and Negro soldiers in PX"
+      keywords: "Branches of service, Deferment and the Selective Service  [...]"
     }
   ],
   questionnaires: [
@@ -91,7 +91,7 @@ SHEETS = {
       identifier: "#{CHOICE_QUESTION_ID}-code01",
       parent_id: CHOICE_QUESTION_ID,
       code: "01",
-      text: "SEPARATE OUTFITS OUT OF DEFERENCE TO SOUTHERN CUSTOMS (IT’S O.K. FOR SOUTH, BUT NOT FOR NORTH, NOT WHERE THIS CAMP IS LOCATED)",
+      text: "SEPARATE OUTFITS OUT OF DEFERENCE TO SOUTHERN CUSTOMS  [...]",
     },
     {
       identifier: "#{CHOICE_QUESTION_ID}-code02",
@@ -103,7 +103,7 @@ SHEETS = {
       identifier: "#{CHOICE_QUESTION_ID}-code03",
       parent_id: CHOICE_QUESTION_ID,
       code: "03",
-      text: "SEPARATE OUTFITS BECAUSE NEGROES THEMSELVES (OR BOTH NEGROES AND WHITES) LIKE IT BETTER THAT WAY (NEGROES FEEL UNCOMFORTABLE WITH WHITES, NEGROES FEEL MORE AT HOME WITH OWN RACE)"
+      text: "SEPARATE OUTFITS BECAUSE NEGROES THEMSELVES (OR BOTH NEGROES AND WHITES) LIKE IT BETTER [...]"
     }
   ],
   answers: [
@@ -158,7 +158,7 @@ SHEETS = {
       question_id: FREE_QUESTION_ID,
       respondent_id: RESPONDENT_ID,
       answer_id: nil,
-      free_response_answer: "In reference to question #25 there is no cooperation with anybody at all including officers, NCO's & enlisted men. I know I would never come back alive if sent into combat with the company I am in now. I know it a heck of a thing to say, but it's the truth.",
+      free_response_answer: "In reference to question #25 there is no cooperation [...]",
       image: "2521127-09-0004.jpg",
       code: "#{CHOICE_QUESTION_ID}-code02"
     }
