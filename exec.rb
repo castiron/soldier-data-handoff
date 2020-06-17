@@ -88,16 +88,19 @@ SHEETS = {
   ],
   question_codes: [
     {
+      identifier: "#{CHOICE_QUESTION_ID}-code01",
       parent_id: CHOICE_QUESTION_ID,
       code: "01",
       text: "SEPARATE OUTFITS OUT OF DEFERENCE TO SOUTHERN CUSTOMS (IT’S O.K. FOR SOUTH, BUT NOT FOR NORTH, NOT WHERE THIS CAMP IS LOCATED)",
     },
     {
+      identifier: "#{CHOICE_QUESTION_ID}-code02",
       parent_id: CHOICE_QUESTION_ID,
       code: "01",
       text: "SEPARATE OUTFITS BECAUSE INTERMINGLING WOULD LEAD TO VIOLENCE, FIGHTS, TROUBLE",
     },
     {
+      identifier: "#{CHOICE_QUESTION_ID}-code03",
       parent_id: CHOICE_QUESTION_ID,
       code: "03",
       text: "SEPARATE OUTFITS BECAUSE NEGROES THEMSELVES (OR BOTH NEGROES AND WHITES) LIKE IT BETTER THAT WAY (NEGROES FEEL UNCOMFORTABLE WITH WHITES, NEGROES FEEL MORE AT HOME WITH OWN RACE)"
@@ -147,7 +150,8 @@ SHEETS = {
       respondent_id: RESPONDENT_ID,
       answer_id: A1_ID,
       free_response_answer: "If separated there wouldn't be any fights",
-      image: "2521127-09-0004.jpg"
+      image: "2521127-09-0004.jpg",
+      code: "#{CHOICE_QUESTION_ID}-code03"
     },
     {
       identifier: SecureRandom::uuid,
@@ -155,7 +159,8 @@ SHEETS = {
       respondent_id: RESPONDENT_ID,
       answer_id: nil,
       free_response_answer: "In reference to question #25 there is no cooperation with anybody at all including officers, NCO's & enlisted men. I know I would never come back alive if sent into combat with the company I am in now. I know it a heck of a thing to say, but it's the truth.",
-      image: "2521127-09-0004.jpg"
+      image: "2521127-09-0004.jpg",
+      code: "#{CHOICE_QUESTION_ID}-code02"
     }
   ]
 }
