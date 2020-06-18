@@ -1,3 +1,3 @@
-identifier,question_id,respondent_id,answer_id,free_response_answer,image,code
-3d9f959d-6f62-4fd9-aae6-cb414a139fc3,S032w.Q.63,a3007826-9662-4735-9434-7f783d2bf41c,4dcb923d-7a79-4027-8ff2-a218101cfa92,If separated there wouldn't be any fights,2521127-09-0004.jpg,S032w.Q.63-code03
-0daa286c-384b-4e88-b276-d49f599266c4,S032w.Q.64,a3007826-9662-4735-9434-7f783d2bf41c,,In reference to question #25 there is no cooperation [...],2521127-09-0004.jpg,S032w.Q.63-code02
+identifier,question_id,respondent_id,answer_id,free_response_answer,image,code_id
+cf1852ff-4df6-44f5-81b7-ffca515375d8,S032w.Q.63,10dc2ca5-4ae8-4dcc-9c80-49194041a0aa,d6f08613-5ed1-4916-8d26-8bc99af9e3c4,If separated there wouldn't be any fights,2521127-09-0004.jpg,S032w.Q.63-code03
+529bbc36-c9c3-4772-8801-6152b0846946,S032w.Q.64,10dc2ca5-4ae8-4dcc-9c80-49194041a0aa,,In reference to question #25 there is no cooperation [...],2521127-09-0004.jpg,S032w.Q.63-code02

@@ -96,7 +96,7 @@ SHEETS = {
     {
       identifier: "#{CHOICE_QUESTION_ID}-code02",
       parent_id: CHOICE_QUESTION_ID,
-      code: "01",
+      code: "02",
       text: "SEPARATE OUTFITS BECAUSE INTERMINGLING WOULD LEAD TO VIOLENCE, FIGHTS, TROUBLE",
     },
     {
@@ -151,7 +151,7 @@ SHEETS = {
       answer_id: A1_ID,
       free_response_answer: "If separated there wouldn't be any fights",
       image: "2521127-09-0004.jpg",
-      code: "#{CHOICE_QUESTION_ID}-code03"
+      code_id: "#{CHOICE_QUESTION_ID}-code03"
     },
     {
       identifier: SecureRandom::uuid,
@@ -160,7 +160,7 @@ SHEETS = {
       answer_id: nil,
       free_response_answer: "In reference to question #25 there is no cooperation [...]",
       image: "2521127-09-0004.jpg",
-      code: "#{CHOICE_QUESTION_ID}-code02"
+      code_id: "#{CHOICE_QUESTION_ID}-code02"
     }
   ]
 }
