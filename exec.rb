@@ -1,5 +1,6 @@
 require 'bundler/inline'
 require 'securerandom'
+require 'json'
 
 gemfile do
   source 'https://rubygems.org'
@@ -12,11 +13,14 @@ OUTPUT_DIR = "./samples"
 SURVEY_UID = SecureRandom.uuid
 QUESTIONNAIRE_ID = "S032w"
 CHOICE_QUESTION_ID = "S032w.Q.63"
+CHOICE_QUESTION_ID_2 = "S032w.Q.64"
 FREE_QUESTION_ID = "S032w.Q.64"
 RESPONDENT_ID = SecureRandom.uuid
 A1_ID = SecureRandom.uuid
 A2_ID = SecureRandom.uuid
 A3_ID = SecureRandom.uuid
+A4_ID = SecureRandom.uuid
+A5_ID = SecureRandom.uuid
 
 SHEETS = {
   surveys: [
@@ -71,9 +75,18 @@ SHEETS = {
       parent_type: "questionnaire",
       position_in_parent: 1,
       type: "choice",
-      question: "Do you think white and Negro soldiers should be in separate outfits or should they be together in the same outfit?",
+      question: "A choice question that alllows multiple choices to be selected and has an attached free response prompt...",
       is_multiple_choice: true,
       followup_prompt: "Write any comments here"
+    },
+    {
+      identifier: CHOICE_QUESTION_ID_2,
+      parent_id: QUESTIONNAIRE_ID,
+      parent_type: "questionnaire",
+      position_in_parent: 2,
+      type: "choice",
+      question: "Another choice question with only one answer allowed and no free response prompt...",
+      is_multiple_choice: false,
     },
     {
       identifier: FREE_QUESTION_ID,
@@ -124,6 +137,18 @@ SHEETS = {
       question_id: CHOICE_QUESTION_ID,
       label: "It doesn't make any difference, Undecided",
       position: 3
+    },
+    {
+      identifier: A4_ID,
+      question_id: CHOICE_QUESTION_ID_2,
+      label: "An answer",
+      position: 1
+    },
+    {
+      identifier: A5_ID,
+      question_id: CHOICE_QUESTION_ID_2,
+      label: "Another",
+      position: 2
     }
   ],
   respondents: [
@@ -150,7 +175,8 @@ SHEETS = {
       respondent_id: RESPONDENT_ID,
       answer_id: A1_ID,
       free_response_answer: "If separated there wouldn't be any fights",
-      image: "2521127-09-0004.jpg",
+      zooniverse_choice_answer_data: { "#{CHOICE_QUESTION_ID}": A1_ID, "#{CHOICE_QUESTION_ID_2}": A4_ID }.to_json,
+      image: "2521127-09-0005.jpg",
       code_id: "#{CHOICE_QUESTION_ID}-code03"
     },
     {
@@ -159,6 +185,7 @@ SHEETS = {
       respondent_id: RESPONDENT_ID,
       answer_id: nil,
       free_response_answer: "In reference to question #25 there is no cooperation [...]",
+      zooniverse_choice_answer_data: nil,
       image: "2521127-09-0004.jpg",
       code_id: "#{CHOICE_QUESTION_ID}-code02"
     }

@@ -1,3 +1,4 @@
 identifier,parent_id,parent_type,position_in_parent,type,question,is_multiple_choice,followup_prompt
-S032w.Q.63,S032w,questionnaire,1,choice,Do you think white and Negro soldiers should be in separate outfits or should they be together in the same outfit?,true,Write any comments here
+S032w.Q.63,S032w,questionnaire,1,choice,A choice question that alllows multiple choices to be selected and has an attached free response prompt...,true,Write any comments here
+S032w.Q.64,S032w,questionnaire,2,choice,Another choice question with only one answer allowed and no free response prompt...,false
 S032w.Q.64,S032w,questionnaire,2,free,Use the space below to write out any other comments you have about any part of this questionnaire:,false,
