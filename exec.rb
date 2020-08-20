@@ -21,6 +21,8 @@ A2_ID = SecureRandom.uuid
 A3_ID = SecureRandom.uuid
 A4_ID = SecureRandom.uuid
 A5_ID = SecureRandom.uuid
+TAG_1_ID = SecureRandom.uuid
+TAG_2_ID = SecureRandom.uuid
 
 SHEETS = {
   surveys: [
@@ -177,7 +179,8 @@ SHEETS = {
       free_response_answer: "If separated there wouldn't be any fights",
       zooniverse_choice_answer_data: { "#{CHOICE_QUESTION_ID}": A1_ID, "#{CHOICE_QUESTION_ID_2}": A4_ID }.to_json,
       image: "2521127-09-0005.jpg",
-      code_id: "#{CHOICE_QUESTION_ID}-code03"
+      code_id: "#{CHOICE_QUESTION_ID}-code03",
+      tags: TAG_1_ID
     },
     {
       identifier: SecureRandom::uuid,
@@ -187,12 +190,24 @@ SHEETS = {
       free_response_answer: "In reference to question #25 there is no cooperation [...]",
       zooniverse_choice_answer_data: nil,
       image: "2521127-09-0004.jpg",
-      code_id: "#{CHOICE_QUESTION_ID}-code02"
+      code_id: "#{CHOICE_QUESTION_ID}-code02",
+      tags: "#{TAG_1_ID}, #{TAG_2_ID}"
     }
+  ],
+  tags: [
+    {
+      identifier: TAG_1_ID,
+      tag: "Race",
+      is_expert_tag: true
+    },
+    {
+      identifier: TAG_2_ID,
+      tag: "Food",
+      is_expert_tag: false
+    }
+
   ]
 }
-
-
 
 def clean_output_dir
   Dir.foreach(OUTPUT_DIR) do |f|
